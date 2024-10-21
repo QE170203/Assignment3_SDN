@@ -3,8 +3,8 @@ const Student = require('../models/studentModel');
 // Create a new student
 exports.createStudent = async (req, res) => {
     try {
-        const { fullName, studentCode, isActive } = req.body;
-        const newStudent = new Student({ fullName, studentCode, isActive });
+        const { name, studentCode, isActive } = req.body;
+        const newStudent = new Student({ name, studentCode, isActive });
         await newStudent.save();
         res.status(201).json({
             success: true,

@@ -30,7 +30,7 @@ app.get('/info', async (req, res) => {
 
         // Filter to return only fullName and studentCode
         const studentInfo = students.map(student => ({
-            fullName: student.fullName,
+            name: student.name,
             studentCode: student.studentCode
         }));
 
