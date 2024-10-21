@@ -42,10 +42,10 @@ exports.getStudentById = async (req, res) => {
 // Update a student by ID
 exports.updateStudent = async (req, res) => {
     try {
-        const { fullName, isActive } = req.body;
+        const { name, isActive } = req.body;
         const student = await Student.findByIdAndUpdate(
             req.params.id,
-            { fullName, isActive },
+            { name, isActive },
             { new: true }
         );
         if (!student) {
